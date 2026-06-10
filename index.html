@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karta — Creator Partner Program</title>
+<link rel="icon" href="assets/karta-symbol-acid.svg">
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  html, body { margin: 0; background: var(--pp-page); color: var(--pp-fg); }
+  body { font-family: var(--pp-font-body); -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  ::selection { background: var(--pp-acid); color: #030303; }
+  @keyframes ppRise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .pp-rise { display: inline-block; animation: ppRise .6s cubic-bezier(.44,0,.16,1) forwards; }
+  @media (prefers-reduced-motion: reduce) { .pp-rise { animation: none; } }
+  @keyframes ppNumIn { from { opacity: 0; transform: translateX(64px) scale(1.09); } to { opacity: .7; transform: none; } }
+  @keyframes ppWordRise { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: none; } }
+  .pp-div-num { opacity: .7; }
+  .pp-divider[data-in] .pp-div-num { animation: ppNumIn 1.15s cubic-bezier(.22,.61,.36,1) .04s both; }
+  .pp-div-word { display: inline-block; }
+  .pp-divider[data-in] .pp-div-word { animation: ppWordRise .62s cubic-bezier(.44,0,.16,1) both; }
+  @media (prefers-reduced-motion: reduce) { .pp-div-num, .pp-div-word { animation: none !important; } }
+  section, footer { scroll-margin-top: 90px; }
+  image-slot { border-radius: 16px; }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #060606; }
+  ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script src="hero-shader.js"></script>
+<script src="image-slot.js"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="charts.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
